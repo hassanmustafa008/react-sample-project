@@ -1,0 +1,20 @@
+$border: darkgray 1px solid;
+
+.Right-column {
+  .right1 {
+    border: $border;
+    height: 50px;
+    border-bottom: none;
+  }
+
+  .right2 {
+    border: $border;
+    height: 150px;
+  }
+
+  .right3 {
+    border: $border;
+    height: 90px;
+    margin: 10px 0 0 0;
+  }
+}

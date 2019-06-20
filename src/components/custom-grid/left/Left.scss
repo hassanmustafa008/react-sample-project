@@ -1,0 +1,12 @@
+$border: darkgray 1px solid;
+
+.Left-column {
+  .area {
+    border: $border;
+    height: 100px;
+  }
+
+  .area:nth-child(-n + 2) {
+    border-bottom: none;
+  }
+}
