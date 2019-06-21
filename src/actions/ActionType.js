@@ -2,7 +2,10 @@ export const ADD_COUNTER = 'ADD_COUNTER';
 export const REMOVE_COUNTER = 'REMOVE_COUNTER';
 
 // articles
-export const ADD_ARTICLE = 'ADD_ARTICLE';
-export const DATA_LOADED = 'DATA_LOADED';
+export const ADD_ARTICLE_LOCAL = 'ADD_ARTICLE_LOCAL';
+export const GET_ARTICLES = 'GET_ARTICLES';
+export const ADD_ARTICLES_REMOTE = 'ADD_ARTICLES_REMOTE';
+export const EDIT_ARTICLE = 'EDIT_ARTICLE';
+export const DELETE_ARTICLE = 'DELETE_ARTICLE';
+
 export const FOUND_BAD_WORD = 'FOUND_BAD_WORD';
-export const DATA_POSTED = 'DATA_POSTED';

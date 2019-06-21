@@ -1,12 +1,16 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {addArticle} from '../../actions/index';
-import {postData} from '../../actions/index';
+import {editData} from '../../actions/index';
 
-class AddArticle extends React.Component {
+class EditArticle extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {title: "", author: "", badWord: false};
+        this.state = {
+            id: this.props.article.id,
+            title: this.props.article.title,
+            author: this.props.article.author,
+            badWord: false
+        };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -17,12 +21,12 @@ class AddArticle extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const id = 5;
+        const id = this.state.id;
         const title = this.state.title;
         const author = this.state.author;
-        // this.props.addArticle({id, title, author});
-        this.props.postData({id, title, author});
         this.setState({title: "", author: ""});
+        this.props.editData({id, title, author});
+        this.props.stateHandler();
     }
 
     render() {
@@ -49,7 +53,7 @@ class AddArticle extends React.Component {
                     <p>{this.state.badWord ? 'found bad words' : null}</p>
                 </div>
                 <button type="submit" className="primary">
-                    SAVE
+                    Update
                 </button>
             </form>
         )
@@ -58,9 +62,8 @@ class AddArticle extends React.Component {
 
 function mapDispatchToProps(dispatch) {
     return {
-        addArticle: article => dispatch(addArticle(article)),
-        postData: article => dispatch(postData(article))
+        editData: article => dispatch(editData(article))
     }
 }
 
-export default connect(null, mapDispatchToProps)(AddArticle);
+export default connect(null, mapDispatchToProps)(EditArticle);

@@ -24,18 +24,20 @@ class App extends React.Component {
             <div className="App">
                 <Router>
                     <Header></Header>
-                    <Switch>
-                        <Route exact path="/" component={Articles}/>
-                        <Route exact path="/grid" component={Grid}/>
-                        <Route exact path="/shoe" component={Shoe}/>
-                        <Route exact path="/shoeTypes" component={ShoeType}/>
-                        <Route exact path="/sandalTypes" component={SandalType}/>
-                        <Route exact path="/users" component={Users}/>
-                        <Route exact path="/todo" component={Todo}/>
-                        <Route exact path="/counter" component={CounterComp}/>
-                        <Route exact path="/mockoon" component={Mockoon}/>
-                        <Route exact path="/editMockoon" component={EditMockoon}/>
-                    </Switch>
+                    <div className='container'>
+                        <Switch>
+                            <Route exact path="/" component={Articles}/>
+                            <Route exact path="/grid" component={Grid}/>
+                            <Route exact path="/shoe" component={Shoe}/>
+                            <Route exact path="/shoeTypes" component={ShoeType}/>
+                            <Route exact path="/sandalTypes" component={SandalType}/>
+                            <Route exact path="/users" component={Users}/>
+                            <Route exact path="/todo" component={Todo}/>
+                            <Route exact path="/counter" component={CounterComp}/>
+                            <Route exact path="/mockoon" component={Mockoon}/>
+                            <Route exact path="/editMockoon" component={EditMockoon}/>
+                        </Switch>
+                    </div>
                     <Footer></Footer>
                 </Router>
                 {/*<AppRouter></AppRouter>*/}
