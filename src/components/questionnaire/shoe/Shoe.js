@@ -21,8 +21,8 @@ class Shoe extends React.Component {
         return (
             <div className='container'>
                 <p>Would you like to buy an shoe?</p>
-                <Link to={'/shoeTypes'}>Yes</Link>
-                <button type='button' onClick={this.toggleShow}>No</button>
+                <Link to={'/shoeTypes'} className='primary'>Yes</Link>
+                <button type='button' className='primary' onClick={this.toggleShow}>No</button>
                 <p>{this.state.isShow ? 'Try something else' : null}</p>
             </div>
         );

@@ -7,12 +7,12 @@ class Header extends React.Component {
         return (
             <div className="App-header">
                 <span>LOGO</span>
+                <span><Link to={'/'}>REDUX</Link></span>
                 <span><Link to={'/grid'}>GRID</Link></span>
-                <span><Link to={'/shoe'}>SHOE</Link></span>
-                <span><Link to={'/users'}>CRUD</Link></span>
+                <span><Link to={'/shoe'}>ROUTER</Link></span>
+                <span><Link to={'/users'}>HOOKS</Link></span>
                 <span><Link to={'/todo'}>TODO</Link></span>
                 <span><Link to={'/counter'}>COUNTER</Link></span>
-                <span><Link to={'/mockoon'}>API</Link></span>
             </div>
         );
     }

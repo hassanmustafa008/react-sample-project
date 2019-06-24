@@ -1,7 +1,7 @@
 import React from 'react';
-import Counter from "../../container/Counter";
-import AddCounter from "../../container/AddCounter";
-import RemoveCounter from "../../container/RemoveCounter";
+import Counter from "./Counter";
+import AddCounter from "./AddCounter";
+import RemoveCounter from "./RemoveCounter";
 
 class CounterComp extends React.Component {
     render() {

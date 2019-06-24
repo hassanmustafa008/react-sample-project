@@ -117,15 +117,21 @@ class Todo extends Component {
                 {this.renderEditForm()}
                 <form onSubmit={this.onSubmitHandle.bind(this)}>
                     <input type="text" name="item" className="item"/>
-                    <button className="btn-add-item">Add</button>
+                    <button className="primary">Add</button>
                 </form>
                 <ul>
                     {this.state.mockData.map(item => (
                         <li key={item.id} className={item.done ? 'done' : 'hidden'}>
                             {item.title}
-                            <button onClick={this.onDeleteHandle.bind(this, item.id)}>Delete</button>
-                            <button onClick={this.onEditHandle.bind(this, item.id, item.title)}>Edit</button>
-                            <button onClick={this.onCompleteHandle.bind(this, item.id)}>Complete</button>
+                            <button className='primary' onClick={this.onDeleteHandle.bind(this, item.id)}>
+                                Delete
+                            </button>
+                            <button className='primary' onClick={this.onEditHandle.bind(this, item.id, item.title)}>
+                                Edit
+                            </button>
+                            <button className='primary' onClick={this.onCompleteHandle.bind(this, item.id)}>
+                                Complete
+                            </button>
                         </li>
                     ))}
                 </ul>

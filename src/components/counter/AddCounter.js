@@ -1,9 +1,10 @@
 import React from 'react';
-import {removeCounter} from '../actions';
-import {bindActionCreators} from "redux";
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
 
-class RemoveCounter extends React.Component {
+import {addCounter} from '../../actions';
+import {bindActionCreators} from "redux";
+
+class AddCounter extends React.Component {
     render() {
         return (
             <form>
@@ -12,9 +13,9 @@ class RemoveCounter extends React.Component {
                         <button className="button is-primary"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    this.props.dispatch(removeCounter())
+                                    this.props.dispatch(addCounter());
                                 }}>
-                            Remove
+                            Add
                         </button>
                     </div>
                 </div>
@@ -24,7 +25,7 @@ class RemoveCounter extends React.Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return {actions: bindActionCreators(removeCounter, dispatch)};
+    return {actions: bindActionCreators(addCounter, dispatch)}
 }
 
-export default connect(mapDispatchToProps)(RemoveCounter);
+export default connect(mapDispatchToProps)(AddCounter);

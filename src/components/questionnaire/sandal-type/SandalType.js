@@ -16,8 +16,8 @@ class SandalType extends React.Component {
         return (
             <div className='container'>
                 <p>Please select which sandal you want to buy?</p>
-                <button type='button' onClick={this.toggleShow}>Leather</button>
-                <button type='button' onClick={this.toggleShow}>Outdoor</button>
+                <button type='button' className='primary' onClick={this.toggleShow}>Leather</button>
+                <button type='button' className='primary' onClick={this.toggleShow}>Outdoor</button>
                 <p>{this.state.isShow ? 'Thank You' : null}</p>
             </div>
         );

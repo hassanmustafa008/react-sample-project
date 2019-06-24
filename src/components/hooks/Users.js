@@ -48,7 +48,6 @@ const Users = () => {
                 </div>
                 <div className="flex-large">
                     <h2>View users</h2>
-                    {/* {state variable}*/}
                     <Table users={users} editRow={editRow} deleteUser={deleteUser}></Table>
                 </div>
             </div>
@@ -73,10 +72,10 @@ const Table = (props) => {
                         <td>{user.name}</td>
                         <td>{user.username}</td>
                         <td>
-                            <button className="button muted-button" onClick={() => props.editRow(user)}>
+                            <button className="primary" onClick={() => props.editRow(user)}>
                                 Edit
                             </button>
-                            <button className="button muted-button" onClick={() => props.deleteUser(user.id)}>
+                            <button className="primary" onClick={() => props.deleteUser(user.id)}>
                                 Delete
                             </button>
                         </td>

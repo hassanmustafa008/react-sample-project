@@ -5,6 +5,7 @@ const initialState = {
 };
 
 function articlesReducer(state = initialState, action) {
+    debugger;
     if (action.type === actionTypes.ADD_ARTICLE_LOCAL) {
         return Object.assign({}, state, {articles: state.articles.concat(action.payload)});
     }

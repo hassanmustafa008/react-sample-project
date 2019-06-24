@@ -1,9 +1,10 @@
 import React from 'react';
 import './List.scss';
-import {Link} from "react-router-dom";
+import {Can} from "@casl/react";
 
 class Table extends React.Component {
     constructor(props) {
+        debugger;
         super(props);
     }
 
@@ -13,7 +14,9 @@ class Table extends React.Component {
                 <thead>
                 <tr>
                     {this.props.cols.map(col => (<th>{col}</th>))}
-                    <th>actions</th>
+                    <Can I='write' a='article' ability={this.props.ability}>
+                        <th>actions</th>
+                    </Can>
                 </tr>
                 </thead>
                 <tbody>
@@ -22,12 +25,16 @@ class Table extends React.Component {
                         <tr key={obj.id}>
                             {this.props.cols.map(col => (<td>{obj[col]}</td>))}
                             <td>
-                                <button className="primary" onClick={() => this.props.editRow(obj)}>
-                                    Edit
-                                </button>
-                                <button className="primary" onClick={() => this.props.deleteRow(obj.id)}>
-                                    Delete
-                                </button>
+                                <Can I='write' a='article' ability={this.props.ability}>
+                                    <button className="primary" onClick={() => this.props.editRow(obj)}>
+                                        Edit
+                                    </button>
+                                </Can>
+                                <Can I='delete' a='article' ability={this.props.ability}>
+                                    <button className="primary" onClick={() => this.props.deleteRow(obj.id)}>
+                                        Delete
+                                    </button>
+                                </Can>
                             </td>
                         </tr>
                     ))
