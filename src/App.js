@@ -15,6 +15,7 @@ import SandalType from "./components/questionnaire/sandal-type/SandalType";
 import Users from "./components/hooks/Users";
 import Todo from "./components/todo/Todo";
 import CounterComp from "./components/counter/CounterComp";
+import SimpleReactValidator from 'simple-react-validator';
 
 class App extends React.Component {
     render() {
